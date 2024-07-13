@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- PgP 2/6/2024  create form with text box element, and button, which allows you to copy text box contents to clipboard and paste somewhere else, like Python IDE
+    
+-->
+    <!-- course constant file that contains CC License, footer info -->
+    <script src="Constants.js"></script>
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy the Code</title>
+
+    <!-- javascript that contains copy function -->
+	<script src="copyText.js"></script>
+
+</head>
+    <body  onload="setVariables()"> 
+
+    <h1>Copy code from the textbox!</h1>
+
+<hr />
+
+<input type="text" id="input">
+<button onclick="copyText()">Go</button><br>
+<input type="text" id="output">
+
+
+
+
+    <!-- Creative Commons License Info -->
+    <div id="xLicense" class=" col-lg-12 text-muted"></div>
+
+    <div id="xfooter" class=" col-lg-12 text-muted"></div>
+
+</body>
+
+
+</html>

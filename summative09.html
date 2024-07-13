@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom IoT Business Solutions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            color: #666;
+            line-height: 1.6;
+        }
+        #datetime {
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Custom IoT Business Solutions</h1>
+        </header>
+        <section>
+            <p>Welcome to our custom IoT business solutions page. We specialize in developing tailored Internet of Things solutions for businesses of all sizes. Whether you're looking to optimize your operations, improve efficiency, or enhance customer experiences, we have the expertise to bring your ideas to life.</p>
+            <p>Our team of experienced developers and engineers will work closely with you to understand your unique requirements and design a solution that meets your specific needs. From hardware development to software integration and analytics, we offer end-to-end IoT services to help you achieve your business goals.</p>
+            <p>With our custom IoT solutions, you can:</p>
+            <ul>
+                <li>Monitor and control your assets in real-time</li>
+                <li>Automate processes to increase productivity</li>
+                <li>Collect and analyze data for actionable insights</li>
+                <li>Improve decision-making and operational efficiency</li>
+                <li>Enhance customer engagement and satisfaction</li>
+            </ul>
+        </section>
+        <footer id="datetime">
+            <h3 id="currentDateTime"></h3>
+        </footer>
+    </div>
+
+    <script>
+        // JavaScript to display current date and time
+        function getCurrentDateTime() {
+            var today = new Date();
+            var date = today.toLocaleDateString();
+            var time = today.toLocaleTimeString();
+            var dateTime = date + ' ' + time;
+            return dateTime;
+        }
+
+        function updateDateTime() {
+            var currentDateTimeElement = document.getElementById("currentDateTime");
+            if (currentDateTimeElement) {
+                currentDateTimeElement.textContent = getCurrentDateTime();
+            }
+        }
+
+        // Update date and time every second
+        setInterval(updateDateTime, 1000);
+
+        // Initial update
+        updateDateTime();
+    </script>
+</body>
+</html>
